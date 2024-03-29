@@ -1,5 +1,3 @@
-const caseArr = [3, 2, 1, 13, 8, 5, 0, 1];
-
 function mergeSort(arr) {
   if (arr.length === 1) {
     return arr;
@@ -24,12 +22,12 @@ function merge(left, right) {
     }
   }
   for (; i < left.length; i++) {
-    result[k++] = left[i++];
+    result[k++] = left[i];
   }
   for (; j < right.length; j++) {
-    result[k++] = right[j++];
+    result[k++] = right[j];
   }
   return result;
 }
 
-console.log(mergeSort(caseArr));
+module.exports = mergeSort;
